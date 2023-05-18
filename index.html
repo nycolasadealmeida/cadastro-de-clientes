@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 20px;
+        }
+        
+        h2 {
+          text-align: center;
+        }
+        
+        .container {
+          max-width: 400px;
+          margin: 0 auto;
+          background-color: rgba(255, 255, 255, 0.5); /* Valor de transparência: 0.8 */
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border: 2px solid red;
+        }
+        
+        .form-group {
+          margin-bottom: 15px;
+        }
+        
+        .form-group label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+        
+        .form-group input {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+        
+        .form-group input[type="submit"] {
+          background-color: #4caf50;
+          color: #fff;
+          cursor: pointer;
+        }
+      </style>
+      </head>
+      <body>
+        <div class="container">
+          <h2>Formulário de Cadastro</h2>
+          <form>
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="senha">Senha:</label>
+              <input type="password" id="senha" name="senha" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="empresa">Empresa:</label>
+              <input type="text" id="empresa" name="empresa" required>
+            </div>
+            <div class="form-group">
+                <label for="cpf">Cpf:</label>
+                <input type="text" id="cpf" name="cpf" required>      
+              </div>
+            
+            <div class="form-group">
+              <label for="sexo">Sexo:</label>
+              <select id="sexo" name="sexo" required>
+                <option value="">Selecione</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="telefone">Número de Telefone:</label>
+              <div style="display: flex;">
+                <select id="dd" name="dd" style="width: 80px; margin-right: 5px;">
+                  <option value="">DD</option>
+                  <option value="11">11</option>
+                  <option value="21">21</option>
+                  <option value="31">31</option>
+                  <option value="47">47</option>
+                </select>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{9}" required style="flex: 1;">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <input type="submit" value="Enviar">
+            </div>
+          </form>
+        </div>
+        
+        <script>
+          const container = document.querySelector('.container');
+          
+          function animateBorder() {
+           
+      container.style.borderColor = container.style.borderColor === 'red'? 'green'  : 'blue';
+      }
+      
+      
+      setInterval(animateBorder, 2000);
+        </script>
+        <style>
+          body {
+            background-image: url('imagem.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        </style>
+      </body>
+      </html>
